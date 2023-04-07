@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Election Results</title>
+
+    <!-- Bootstrap -->
+    <!--link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"-->
+
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Election Results</h1>
+          <hr/>
+          <br/>
+          <div id="content">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Votes</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+                <% candList.forEach(function(cand) {%>
+                  <tr>
+                    <th><%= cand.id%></th>
+                    <td><%= cand.name %></td>
+                    <td><%= cand.voteCount %></td>
+                  </tr>
+                <% }); %> 
+              </tbody>
+            </table>
+            <hr/>
+            <form method="POST" action="vote">
+              <div class="form-group">
+                <label>Select Candidate</label>
+                <select class="form-control" name="candSelect">
+                  <% candList.forEach(function(cand) {%>
+                    <option name="<%=cand.name%>" value="<%= cand.id %>"><%= cand.name %></option>
+                  <% }); %> 
+                </select><br/>
+                Your Address: <input type="text" name="accountAddress" value="<%= addr %>" readonly><br/>
+              </div>
+              <button type="submit" class="btn btn-primary">Vote</button>
+              <hr />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="./js/bootstrap.min.js"></script-->
+    <!--script src="/src/js/web3.min.js"></script-->
+    <!--script src="./js/truffle-contract.js"></script-->
+    <!--script src="/src/js/app.js"></script-->
+  </body>
+</html>

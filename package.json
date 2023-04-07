@@ -1,0 +1,23 @@
+{
+  "name": "ejs-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "eth-crypto": "^2.6.0",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "prompts": "^2.4.2",
+    "random": "^4.1.0",
+    "web3": "^1.9.0"
+  }
+}
