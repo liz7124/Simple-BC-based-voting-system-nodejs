@@ -2,7 +2,7 @@
 
 ### Run
 1. Install dependencies in ```setup.sh```.
-2. Run ```ganache-cli -m dongseo``` for the Ethereum Virtual Machine (EVM) Client.
+2. Run ```ganache-cli -m dongseo``` for the Ethereum Client.
 3. Run ```truffle migrate --reset --config truffle-config.ejs```.
 4. Change ```dir``` variable in src/js/tools.js to your directory path.
 5. Run server ```node src/js/server.js```.
