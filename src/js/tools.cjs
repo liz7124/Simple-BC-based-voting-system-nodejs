@@ -1,4 +1,3 @@
-const EthCrypto = require('eth-crypto');
 const fs = require('fs');
 const Web3 = require('web3');
 
