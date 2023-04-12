@@ -6,6 +6,5 @@ npm install -g truffle
 npm install -g ganache-cli
 
 npm install express
-npm install eth-crypto --save
 npm install web3
 npm install cookie-parser
