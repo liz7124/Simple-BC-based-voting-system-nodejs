@@ -29,47 +29,8 @@ var self = module.exports = {
     constructSmartContract: function (abi, address) {
         return new web3.eth.Contract(abi, address);
     },
-    /**
-     * Hash the payload.
-     * @param {string} payload  the payload to be hashed.
-     */
-    /*hashPayload: function (payload) {
-        return EthCrypto.hash.keccak256(payload);
-        //var hash = web3.utils.keccak256(web3.eth.abi.encodeParameters(payload));
-        //return hash;
-    },*/
-    /**
-     * Encrypt the payload with destination public key.
-     * @param {string} payloadHash      Hash of payload to be signed.
-     * @param {hex} sourcePrivateKey    Key used to sign.
-     */
-    signPayload: function (payloadHash, sourcePrivateKey) {
-        return EthCrypto.sign(sourcePrivateKey, payloadHash);
-    },
-    /**
-     * Recover the ethereum address from given signature.
-     * @param {string} signature    the signature.
-     * @param {string} hash         the hash pf the payload tied to the signature.
-     */
-    recoverAddress: function (signature, hash) {
-        return EthCrypto.recover(signature, hash);
-    },
 
 //-------------------GET---------------------------------------//
-    /**
-     * Get user private key from ganache configuration.
-     */
-    getUserPrivateKey: function () {
-        let obj = self.readFile(userPath);
-        return obj.privateKey;
-    },
-    /**
-     * Get user public key from ganache configuration.
-     */
-    getUserPublicKey: function () {
-        let obj = self.readFile(userPath);
-        return EthCrypto.publicKeyByPrivateKey(obj.privateKey);
-    },
     /**
      * Get user address from ganache configuration.
      */
