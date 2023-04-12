@@ -41,9 +41,8 @@ app.post('/registration', async (request, response) => {
 });
 
 app.get('/login',function(request,response) {
-    //let _nounce = random.int(10, 1000);
     response.render('pages/login', {
-        //nounce: _nounce
+
     });
 });
 
