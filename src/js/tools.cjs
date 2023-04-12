@@ -4,7 +4,6 @@ const Web3 = require('web3');
 
 //path
 const dir = "/home/lizz/Projects/GIT/voting-system/"
-const userPath = dir + 'src/assets/user.json';
 const contractPath = dir + 'src/assets/voting-contract.json';
 const contractABIPath = dir + 'build/contracts/voting.json';
 
@@ -31,13 +30,6 @@ var self = module.exports = {
     },
 
 //-------------------GET---------------------------------------//
-    /**
-     * Get user address from ganache configuration.
-     */
-    getUserAddress: function() {
-        let obj = self.readFile(userPath);
-        return web3.utils.toChecksumAddress(obj.address);
-    },
     /**
      * Get contract address from ganache after 'truffle deploy'.
      */
